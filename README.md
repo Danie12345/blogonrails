@@ -1,24 +1,32 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Blog App
 
-Things you may want to cover:
+A blog app made with Rails.
 
-* Ruby version
+## Setup Project
+- Clone repo.
+- Install dependencies with `bundle install`
 
-* System dependencies
+## Usage
+- Run test with `rspec spec -f doc lib`
 
-* Configuration
+## Author
 
-* Database creation
+👤 **Daniel Malo**
 
-* Database initialization
+- GitHub: [@Danie12345](https://github.com/Danie12345)
+- Twitter: [@DanielMalo_v4](https://twitter.com/DanielMalo_v4)
+- LinkedIn: [Daniel Malo](https://linkedin.com/in/daniel-malo)
 
-* How to run the test suite
+---
 
-* Services (job queues, cache servers, search engines, etc.)
+## 🤝 Contributing
 
-* Deployment instructions
+Contributions, issues, and feature requests are welcome!
 
-* ...
+Feel free to check the [issues page](https://github.com/anagudelogu/ruby-rubocop-template/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
