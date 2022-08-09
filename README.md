@@ -25,7 +25,7 @@ A blog app made with Rails.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/anagudelogu/ruby-rubocop-template/issues).
+Feel free to check the [issues page](https://github.com/Danie12345/blogonrails/issues).
 
 ## Show your support
 
