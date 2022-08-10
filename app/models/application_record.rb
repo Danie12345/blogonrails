@@ -18,3 +18,8 @@ class Like < ApplicationRecord
   belongs_to :user
   belongs_to :post
 end
+
+class Comment < ApplicationRecord
+  belongs_to :user
+  belongs_to :post
+end
