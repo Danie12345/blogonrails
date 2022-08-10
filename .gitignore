@@ -32,3 +32,6 @@
 
 # Ignore node_modules
 node_modules
+
+# Ignore random stuff
+testing_models.rb
