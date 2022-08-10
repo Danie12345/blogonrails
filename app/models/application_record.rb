@@ -13,3 +13,8 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
 end
+
+class Like < ApplicationRecord
+  belongs_to :user
+  belongs_to :post
+end
