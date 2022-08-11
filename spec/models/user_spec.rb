@@ -49,4 +49,8 @@ RSpec.describe User, type: :model do
   it "should have a private method that returns the user from an id" do
     expect(User.send(:from_user, subject.id)).to eq(subject)
   end
+
+  it "should have a name that is not blank" do
+    expect(subject.name.length > 0).to be true
+  end
 end
