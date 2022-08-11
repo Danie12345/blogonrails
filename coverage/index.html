@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-11T13:41:09-05:00">2022-08-11T13:41:09-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-11T15:22:49-05:00">2022-08-11T15:22:49-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.43
+         1.42
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>91</b> relevant lines,
-    <span class="green"><b>91</b> lines covered</span> and
+    <b>101</b> relevant lines,
+    <span class="green"><b>101</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -88,7 +88,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">4.25</td>
+            <td class="cell--number">4.50</td>
             
           </tr>
         
@@ -106,11 +106,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#675943ecdbfa14e0fe75fd2293fb6f0a8d53d0fe" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.38</td>
+            <td class="cell--number">1.30</td>
             
           </tr>
         
@@ -249,11 +249,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#df2ba48bed9f450ec784fb3309b4e3702c3dffcc" class="src_link" title="spec/models/user_spec.rb">spec/models/user_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">56</td>
-            <td class="cell--number">32</td>
-            <td class="cell--number">32</td>
+            <td class="cell--number">66</td>
+            <td class="cell--number">40</td>
+            <td class="cell--number">40</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.63</td>
+            <td class="cell--number">1.55</td>
             
           </tr>
         
@@ -398,8 +398,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="14" data-linenumber="5">
-            <span class="hits">14</span>
+          <li class="covered" data-hits="15" data-linenumber="5">
+            <span class="hits">15</span>
             
 
             
@@ -689,8 +689,8 @@
     
 
     <div class="t-line-summary">
-      <b>8</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>10</b> relevant lines.
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -779,18 +779,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="8">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  scope :most_recent_posts, -&gt;(id) { from_user(id).posts.order(created_at: :desc).limit(3) }</code>
+            <code class="ruby">  validates :name, presence: true</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates :posts_counter, comparison: { greater_than_or_equal_to: 0}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -801,18 +812,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="11">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby">  scope :most_recent_posts, -&gt;(id) { from_user(id).posts.order(created_at: :desc).limit(3) }</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -823,7 +834,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="12">
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="15">
             <span class="hits">3</span>
             
 
@@ -834,7 +867,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -3148,7 +3181,7 @@
 
             
 
-            <code class="ruby">class PostTest &lt; ActiveSupport::TestCase</code>
+            <code class="ruby">RSpec.describe Post, type: :model do</code>
           </li>
         </div>
       
@@ -3182,8 +3215,8 @@
     
 
     <div class="t-line-summary">
-      <b>32</b> relevant lines.
-      <span class="green"><b>32</b> lines covered</span> and
+      <b>40</b> relevant lines.
+      <span class="green"><b>40</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3228,8 +3261,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="4">
-            <span class="hits">11</span>
+          <li class="covered" data-hits="12" data-linenumber="4">
+            <span class="hits">12</span>
             
 
             
@@ -3250,8 +3283,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="6">
-            <span class="hits">11</span>
+          <li class="covered" data-hits="12" data-linenumber="6">
+            <span class="hits">12</span>
             
 
             
@@ -3773,7 +3806,7 @@
 
             
 
-            <code class="ruby">  it &quot;should have a name that is not blank&quot; do</code>
+            <code class="ruby">  it &quot;should validate a name that is not blank&quot; do</code>
           </li>
         </div>
       
@@ -3784,12 +3817,23 @@
 
             
 
-            <code class="ruby">    expect(subject.name.length &gt; 0).to be true</code>
+            <code class="ruby">    subject.name = nil</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="covered" data-hits="1" data-linenumber="55">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(subject).to_not be_valid</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -3800,7 +3844,106 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="57">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="58">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &quot;should validate a posts_counter to be greater than or equal to 0&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="59">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    subject.posts_counter = -1</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="60">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(subject).to_not be_valid</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="61">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    subject.posts_counter = 0</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="62">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(subject).to be_valid</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    subject.posts_counter = 1</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="64">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(subject).to be_valid</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
             
             
 

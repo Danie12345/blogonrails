@@ -50,7 +50,17 @@ RSpec.describe User, type: :model do
     expect(User.send(:from_user, subject.id)).to eq(subject)
   end
 
-  it "should have a name that is not blank" do
-    expect(subject.name.length > 0).to be true
+  it "should validate a name that is not blank" do
+    subject.name = nil
+    expect(subject).to_not be_valid
+  end
+
+  it "should validate a posts_counter to be greater than or equal to 0" do
+    subject.posts_counter = -1
+    expect(subject).to_not be_valid
+    subject.posts_counter = 0
+    expect(subject).to be_valid
+    subject.posts_counter = 1
+    expect(subject).to be_valid
   end
 end
