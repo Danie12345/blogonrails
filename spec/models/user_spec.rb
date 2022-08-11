@@ -23,4 +23,16 @@ RSpec.describe User, type: :model do
     expect(subject.bio).to eq('Teacher from Mexico.')
     expect(subject.bio.class).to eq(String)
   end
+
+  it "should have a posts count starting at 0" do
+    expect(subject.posts_counter).to eq(0)
+  end
+
+  it "should have a created_at timestamp" do
+    expect(subject.created_at.class).to eq(ActiveSupport::TimeWithZone)
+  end
+
+  it "should have a updated_at timestamp" do
+    expect(subject.updated_at.class).to eq(ActiveSupport::TimeWithZone)
+  end
 end
