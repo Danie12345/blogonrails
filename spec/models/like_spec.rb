@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe Post, type: :model do
+RSpec.describe Like, type: :model do
   user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
   
   post = Post.create(author: user, title: 'Hello 1', text: 'This is my first post')
   
   subject = Like.create(post: post, author: user)
   
-  it "should have am author of type User" do
+  it "should have an author of type User" do
     expect(subject.author).to eq(user)
     expect(subject.author.class).to eq(User)
   end
@@ -25,7 +25,7 @@ RSpec.describe Post, type: :model do
     expect(subject.created_at.class).to eq(ActiveSupport::TimeWithZone)
   end
 
-  it "should have a updated_at timestamp" do
+  it "should have an updated_at timestamp" do
     expect(subject.updated_at.class).to eq(ActiveSupport::TimeWithZone)
   end
 

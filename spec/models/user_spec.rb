@@ -32,7 +32,7 @@ RSpec.describe User, type: :model do
     expect(subject.created_at.class).to eq(ActiveSupport::TimeWithZone)
   end
 
-  it "should have a updated_at timestamp" do
+  it "should have an updated_at timestamp" do
     expect(subject.updated_at.class).to eq(ActiveSupport::TimeWithZone)
   end
 
