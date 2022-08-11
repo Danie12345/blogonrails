@@ -7,13 +7,17 @@ class Post < ApplicationRecord
 
   after_save :increment_user_post_count
 
-  def most_recent_comments
-    comments.order(created_at: :desc).limit(5)
-  end
+  validates :title, length: { maximum: 251 }, allow_blank: false
+  validates :comments_counter, comparison: { greater_than_or_equal_to: 0 }
+  validates :likes_counter, comparison: { greater_than_or_equal_to: 0 }
+
+  scope :most_recent_comments, ->(id) { from_post(id).comments.order(created_at: :desc).limit(5) }
 
   private
 
+  scope :from_post, ->(id) { where(id:)[0] }
+
   def increment_user_post_count
-    author.posts_counter.nil? ? author.update(posts_counter: 1) : author.increment!(:posts_counter)
+    author.increment!(:posts_counter)
   end
 end
