@@ -35,4 +35,14 @@ RSpec.describe User, type: :model do
   it "should have a updated_at timestamp" do
     expect(subject.updated_at.class).to eq(ActiveSupport::TimeWithZone)
   end
+
+  it "should have a method that returns at most the 3 most recent posts" do
+    first_post = Post.create(author: subject, title: 'Hello 1', text: 'This is my first post')
+    second_post = Post.create(author: subject, title: 'Hello 2', text: 'This is my second post')
+    third_post = Post.create(author: subject, title: 'Hello 3', text: 'This is my  third post')
+    fourth_post = Post.create(author: subject, title: 'Hello 4', text: 'This is my fourth post')
+
+    expect(subject.posts_counter).to eq(4)
+    expect(User.most_recent_posts(subject.id).length).to eq(3)
+  end
 end
