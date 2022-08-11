@@ -45,4 +45,8 @@ RSpec.describe User, type: :model do
     expect(subject.posts_counter).to eq(4)
     expect(User.most_recent_posts(subject.id).length).to eq(3)
   end
+
+  it "should have a private method that returns the user from an id" do
+    expect(User.send(:from_user, subject.id)).to eq(subject)
+  end
 end
