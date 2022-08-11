@@ -1,13 +1,349 @@
 {
   "RSpec": {
     "coverage": {
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/config/environment.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          null,
+          1
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/config/application.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/config/boot.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/config/environments/test.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/config/initializers/assets.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/config/initializers/content_security_policy.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/config/initializers/permissions_policy.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/config/routes.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/spec/models/like_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/spec/models/post_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          11,
+          null,
+          11,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/app/models/user.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          2,
+          null,
+          1,
+          null,
+          3,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          14,
+          null,
+          null
+        ]
+      },
+      "C:/Users/danie/Desktop/General/Extras/Programación/HTML/Microverse/Module 5/Week 21/blogonrails/app/models/post.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          4,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1660190066
+    "timestamp": 1660243268
   }
 }
