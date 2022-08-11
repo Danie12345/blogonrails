@@ -5,6 +5,9 @@ class User < ApplicationRecord
   has_many :likes, class_name: 'Like', foreign_key: 'author_id'
   has_many :comments, class_name: 'Comment', foreign_key: 'author_id'
 
-  scope :from_user, ->(name) { where(name:) }
-  scope :most_recent_posts, ->(name) { from_user(name)[0].posts.order(created_at: :desc).limit(3) }
+  scope :most_recent_posts, ->(id) { from_user(id).posts.order(created_at: :desc).limit(3) }
+
+  private
+  
+  scope :from_user, ->(id) { where(id:)[0] }
 end
