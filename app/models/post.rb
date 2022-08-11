@@ -7,7 +7,7 @@ class Post < ApplicationRecord
 
   after_save :increment_user_post_count
 
-  validates :title, length: { maximum: 250 }, allow_blank: false
+  validates :title, length: { maximum: 251 }, allow_blank: false
   validates :comments_counter, comparison: { greater_than_or_equal_to: 0}
   validates :likes_counter, comparison: { greater_than_or_equal_to: 0}
 
