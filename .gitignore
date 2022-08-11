@@ -38,3 +38,4 @@ coverage/*
 
 # Ignore random stuff
 testing_models.rb
+tests.yml
