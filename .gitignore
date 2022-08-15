@@ -35,3 +35,5 @@ node_modules
 
 # Ignore random stuff
 testing_models.rb
+
+coverage
