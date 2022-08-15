@@ -4,6 +4,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    if User.all.empty?
+      @user = 'no users found at all!'
+    else
+      @user = User.find(params[:id])
+    end
   end
 end
