@@ -18,9 +18,9 @@ RSpec.describe UsersController, type: :request do
   end
 
   context "when client displays a single user (#show)" do
-    User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
+    user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
 
-    before(:each) { get "/users/864" }
+    before(:each) { get "/users/#{user.id}" }
 
     it "should return a correct (OK) status response" do
       expect(response).to have_http_status(:ok)
