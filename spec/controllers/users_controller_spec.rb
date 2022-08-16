@@ -18,8 +18,20 @@ RSpec.describe UsersController, type: :request do
   end
 
   context "when client displays a single user (#show)" do
-    it "should return a correct (OK) status response"
-    it "should render the correct template"
-    it "should contain the correct placeholder text in the body"
+    User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
+
+    before(:each) { get "/users/864" }
+
+    it "should return a correct (OK) status response" do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it "should render the correct template" do
+      expect(response).to render_template(:show)
+    end
+
+    it "should contain the correct placeholder text in the body" do
+      expect(response.body).to include("Hello individual user!")
+    end
   end
 end
