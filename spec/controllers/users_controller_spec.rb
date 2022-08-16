@@ -6,7 +6,11 @@ RSpec.describe UsersController, type: :request do
       get "/users"
       expect(response).to have_http_status(:ok)
     end
-    it "should render the correct template"
+
+    it "should render the correct template" do
+      expect(response).to render_template(:index)
+    end
+
     it "should contain the correct placeholder text in the body"
   end
 
