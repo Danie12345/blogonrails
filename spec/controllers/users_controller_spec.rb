@@ -12,7 +12,9 @@ RSpec.describe UsersController, type: :request do
       expect(response).to render_template(:index)
     end
 
-    it "should contain the correct placeholder text in the body"
+    it "should contain the correct placeholder text in the body" do
+      expect(response.body).to include("Hello users index!")
+    end
   end
 
   context "when client displays a single user (#show)" do
