@@ -1,5 +1,13 @@
 <div>
-  <%= image_tag(user.photo, :alt => "Photo of #{user.name}") %>
-  <%= user.name %>
-  Number of Posts: <%= user.posts_counter %>
+  <div class="user-img">
+    <%= image_tag(user.photo, :alt => "Photo of #{user.name}") %>
+  </div>
+  <div>
+    <div>
+      <%= user.name %>
+    </div>
+    <div>
+      Number of Posts: <%= user.posts_counter %>
+    </div>
+  </div>
 </div>
