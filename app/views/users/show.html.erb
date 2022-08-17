@@ -1,30 +1,25 @@
-<div>
-  <%= link_to :back do %>
-    <i class="fa-solid fa-arrow-left-long"></i>
-  <% end %>
-  <div>
-    <%= render "shared/user_card", user: @user %>
-  </div>
+<%= link_to :back do %>
+  <i class="fa-solid fa-arrow-left-long"></i>
+<% end %>
+<div class="users-show">
+  <%= render "shared/user_card", user: @user %>
   <div class="bio">
     <span>Bio</span>
     <p class="user-bio"><%= @user.bio %> </p>
   </div>
-  <div class="recent-posts">
-    <ul class="posts-list">
-      <% @user.most_recent_posts.each_with_index do |post, i| %>
-        <li class="recent-post">
-          <div class="post-preview">
-            <span class="post-index">Post # <%= i + 1 %></span>
-            <span class="post-title">
-              <%= post.title %>
-            </span>
-            <div class="post-stats">
-              <span class="post-comments-counter">Comments <%= post.comments_counter %> </span>
-              <span class="post-likes-counter">Likes <%= post.likes_counter %> </span>
-            </div>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+  <ul class="posts-list">
+    <% @user.most_recent_posts.each_with_index do |post, i| %>
+      <li class="recent-post">
+        <span class="post-index">Post # <%= i + 1 %></span>
+        <span class="post-title"><%= post.title %></span>
+        <div class="post-stats">
+          <span class="post-comments-counter">Comments <%= post.comments_counter %> </span>
+          <span class="post-likes-counter">Likes <%= post.likes_counter %> </span>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "/users/#{@user.id}/posts", :action => 'go' do %>
+    <button class="more-posts-button">See more</button>
+  <% end %>
 </div>
