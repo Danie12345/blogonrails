@@ -15,7 +15,7 @@ RSpec.describe PostsController, type: :request do
     end
 
     it 'should contain the correct placeholder text in the body' do
-      expect(response.body).to include('Hello posts index!')
+      expect(response.body).to include('Pagination')
     end
   end
 
@@ -33,7 +33,7 @@ RSpec.describe PostsController, type: :request do
     end
 
     it 'should contain the correct placeholder text in the body' do
-      expect(response.body).to include('Hello individual post!')
+      expect(response.body).to include('by')
     end
   end
 end

@@ -1,0 +1,39 @@
+.posts-index {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.posts-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  gap: 18px;
+}
+
+.recent-post {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 3%;
+  gap: 4px;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+}
+
+.post-stats {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.post-item {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 3%;
+  gap: 4px;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+}

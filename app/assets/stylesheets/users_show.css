@@ -1,0 +1,14 @@
+.users-show {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.more-posts-button {
+  margin-bottom: 16px;
+}

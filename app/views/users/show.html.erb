@@ -1,2 +1,18 @@
-<h1>Hello individual user!</h1>
-<%= @user %>
+<%= link_to "/users" do %>
+  <i class="fa-solid fa-arrow-left-long"></i>
+<% end %>
+<div class="users-show">
+  <%= render "shared/user_card", user: @user %>
+  <div class="bio">
+    <span>Bio</span>
+    <p class="user-bio"><%= @user.bio %></p>
+  </div>
+  <%= render partial: "shared/posts_list", locals: { posts: @user.most_recent_posts, type: 0, user: @user } %>
+  <% if !@user.posts.empty?%>
+    <%= link_to "/users/#{@user.id}/posts", :action => 'go' do %>
+      <button class="more-posts-button">See more</button>
+    <% end %>
+  <% else %>
+    There are no posts available.
+  <% end %>
+</div>

@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :posts_counter, comparison: { greater_than_or_equal_to: 0 }
 
-  scope :most_recent_posts, ->(id) { from_user(id).posts.order(created_at: :desc).limit(3) }
-
-  scope :from_user, ->(id) { where(id:)[0] }
+  def most_recent_posts
+    posts.order(created_at: :desc).limit(3)
+  end
 end
