@@ -11,11 +11,7 @@
     <% @user.most_recent_posts.each_with_index do |post, i| %>
       <li class="recent-post">
         <span class="post-index">Post # <%= i + 1 %></span>
-        <span class="post-title"><%= post.title %></span>
-        <div class="post-stats">
-          <span class="post-comments-counter">Comments <%= post.comments_counter %> </span>
-          <span class="post-likes-counter">Likes <%= post.likes_counter %> </span>
-        </div>
+        <%= render "shared/post_preview", post: post %>
       </li>
     <% end %>
   </ul>
