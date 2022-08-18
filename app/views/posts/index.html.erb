@@ -1,7 +1,7 @@
-<%= link_to :back do %>
+<%= link_to "/users/#{@user.id}" do %>
   <i class="fa-solid fa-arrow-left-long"></i>
 <% end %>
 <div class="posts-index">
-  <%= render "shared/user_card", user: @posts[0].author %>
-  <%= render partial: "shared/posts_list", locals: { posts: @posts, type: 1 }, class: "posts-list" %>
+  <%= render "shared/user_card", user: @user %>
+  <%= render partial: "shared/posts_list", locals: { posts: @posts, type: 0 }, class: "posts-list" %>
 </div>
