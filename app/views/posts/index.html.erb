@@ -1,8 +1,8 @@
-<%= link_to "/users/#{@user.id}" do %>
+<%= link_to user_path(id: @user.id) do %>
   <i class="fa-solid fa-arrow-left-long"></i>
 <% end %>
 <div class="posts-index">
   <%= render "shared/user_card", user: @user %>
-  <%= render partial: "shared/posts_list", locals: { posts: @posts, type: 0 }, class: "posts-list" %>
+  <%= render "shared/posts_list", posts: @posts, type: 0, clickable: true, user: @user %>
   <button>Pagination</button>
 </div>

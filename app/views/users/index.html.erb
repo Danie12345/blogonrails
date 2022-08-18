@@ -2,7 +2,7 @@
   <ul class="users-list">
     <% @users.each do |user| %>
       <li>
-        <%= link_to "users/#{user.id}", :action => 'go' do %>
+        <%= link_to user_path(id: user.id), :action => 'go' do %>
           <%= render "shared/user_card", user: user %>
         <% end %>
       </li>

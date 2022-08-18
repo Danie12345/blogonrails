@@ -1,4 +1,4 @@
-<%= link_to "/users/#{@user.id}/posts", :action => 'go' do %>
+<%= link_to user_posts_path(user_id: @user.id), :action => 'go' do %>
   <i class="fa-solid fa-arrow-left-long"></i>
 <% end %>
 <div class="full-post">
