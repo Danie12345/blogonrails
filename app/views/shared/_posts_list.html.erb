@@ -1,5 +1,5 @@
 <ul class="posts-list">
-  <% @posts.each_with_index do |post, i| %>
+  <% posts.each_with_index do |post, i| %>
     <li class="post-item">
       <span class="post-index">Post # <%= i + 1 %></span>
       <%= render "shared/post_preview", post: post %>
