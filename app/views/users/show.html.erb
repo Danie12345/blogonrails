@@ -8,7 +8,11 @@
     <p class="user-bio"><%= @user.bio %></p>
   </div>
   <%= render partial: "shared/posts_list", locals: { posts: @user.most_recent_posts, type: 0, user: @user } %>
-  <%= link_to "/users/#{@user.id}/posts", :action => 'go' do %>
-    <button class="more-posts-button">See more</button>
+  <% if !@user.posts.empty?%>
+    <%= link_to "/users/#{@user.id}/posts", :action => 'go' do %>
+      <button class="more-posts-button">See more</button>
+    <% end %>
+  <% else %>
+    There are no posts available.
   <% end %>
 </div>
