@@ -9,28 +9,6 @@
   gap: 12px;
 }
 
-.posts-list {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
-  gap: 12px
-}
-
-.recent-post {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.post-stats {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-}
-
 .more-posts-button {
   margin-bottom: 16px;
 }
