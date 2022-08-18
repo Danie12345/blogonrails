@@ -1,2 +1,15 @@
-<h1>Hello posts index!</h1>
-<%= @posts %>
+<%= link_to :back do %>
+  <i class="fa-solid fa-arrow-left-long"></i>
+<% end %>
+<div class="posts-index">
+  <%= render "shared/user_card", user: @posts[0].author %>
+  <ul class="posts-list">
+    <% @posts.each_with_index do |post, i| %>
+      <li class="post-item">
+        <span class="post-index">Post # <%= i + 1 %></span>
+        <%= render "shared/post_preview", post: post %>
+        <%= render "shared/comments_preview", comments: post.most_recent_comments %>
+      </li>
+    <% end %>
+  </ul>
+</div>
