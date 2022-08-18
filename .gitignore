@@ -37,3 +37,4 @@ node_modules
 testing_models.rb
 
 coverage
+insert_data.rb

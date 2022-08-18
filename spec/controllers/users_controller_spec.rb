@@ -13,7 +13,7 @@ RSpec.describe UsersController, type: :request do
     end
 
     it 'should contain the correct placeholder text in the body' do
-      expect(response.body).to include('Hello users index!')
+      expect(response.body).to include('Number')
     end
   end
 
@@ -31,7 +31,7 @@ RSpec.describe UsersController, type: :request do
     end
 
     it 'should contain the correct placeholder text in the body' do
-      expect(response.body).to include('Hello individual user!')
+      expect(response.body).to include('Bio')
     end
   end
 end

@@ -1,0 +1,13 @@
+<% if !comments.empty? %>
+  <ul class="comments-list">
+    <% comments.each do |comment| %>
+      <li class="comment-item">
+        <%= comment.author.name %>: <%= comment.text %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <div class="comment-item">
+    <small>There are no comments on this post.</small>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+.users-index {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.users-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  gap: 20px;
+}

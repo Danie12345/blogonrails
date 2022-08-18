@@ -1,2 +1,8 @@
-<h1>Hello posts index!</h1>
-<%= @posts %>
+<%= link_to "/users/#{@user.id}" do %>
+  <i class="fa-solid fa-arrow-left-long"></i>
+<% end %>
+<div class="posts-index">
+  <%= render "shared/user_card", user: @user %>
+  <%= render partial: "shared/posts_list", locals: { posts: @posts, type: 0 }, class: "posts-list" %>
+  <button>Pagination</button>
+</div>

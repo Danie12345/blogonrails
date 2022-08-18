@@ -40,8 +40,16 @@ RSpec.describe Post, type: :model do
     expect(user.posts_counter).to eq(1)
   end
 
-  it 'should have a private method that returns the user from an id' do
-    expect(Post.send(:from_post, subject.id)).to eq(subject)
+  it 'should have a method that returns the top 5 recent comments' do
+    Comment.create(post: subject, author: user, text: 'Bye Mom!')
+    Comment.create(post: subject, author: user, text: 'Bye Mom!')
+    Comment.create(post: subject, author: user, text: 'Bye Mom!')
+    Comment.create(post: subject, author: user, text: 'Bye Mom!')
+    Comment.create(post: subject, author: user, text: 'Bye Mom!')
+    Comment.create(post: subject, author: user, text: 'Bye Mom!')
+
+    expect(subject.comments_counter).to eq(6)
+    expect(subject.most_recent_comments.length).to eq(5)
   end
 
   it 'should validate a title that is not blank' do
