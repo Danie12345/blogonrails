@@ -1,4 +1,4 @@
-<%= link_to "/users" do %>
+<%= link_to users_path do %>
   <i class="fa-solid fa-arrow-left-long"></i>
 <% end %>
 <div class="users-show">
@@ -7,9 +7,9 @@
     <span>Bio</span>
     <p class="user-bio"><%= @user.bio %></p>
   </div>
-  <%= render partial: "shared/posts_list", locals: { posts: @user.most_recent_posts, type: 0, user: @user } %>
+  <%= render "shared/posts_list", posts: @user.most_recent_posts, type: 0, clickable: false, user: @user %>
   <% if !@user.posts.empty?%>
-    <%= link_to "/users/#{@user.id}/posts", :action => 'go' do %>
+    <%= link_to user_posts_path(user_id: @user.id), :action => 'go' do %>
       <button class="more-posts-button">See more</button>
     <% end %>
   <% else %>

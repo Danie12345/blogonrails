@@ -10,7 +10,12 @@
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
-  gap: 18px;
+  gap: 12px;
+}
+
+.post-card {
+  box-sizing: border-box;
+  padding: 3%;
 }
 
 .recent-post {
@@ -29,11 +34,19 @@
   gap: 8px;
 }
 
+.post-item > * {
+  border: 1px solid rgb(0, 0, 0, 0.4);
+}
+
 .post-item {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 3%;
+  padding: 8px;
   gap: 4px;
-  border: 1px solid rgb(0, 0, 0, 0.4);
+}
+
+.post-comments {
+  box-sizing: border-box;
+  padding: 5%;
 }
