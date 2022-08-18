@@ -11,11 +11,11 @@ class Post < ApplicationRecord
   validates :comments_counter, comparison: { greater_than_or_equal_to: 0 }
   validates :likes_counter, comparison: { greater_than_or_equal_to: 0 }
 
-  scope :most_recent_comments, ->(id) { from_post(id).comments.order(created_at: :desc).limit(5) }
+  def most_recent_comments
+    comments.order(created_at: :desc).limit(5)
+  end
 
   private
-
-  scope :from_post, ->(id) { where(id:)[0] }
 
   def increment_user_post_count
     author.increment!(:posts_counter)
