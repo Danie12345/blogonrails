@@ -43,11 +43,7 @@ RSpec.describe User, type: :model do
     Post.create(author: subject, title: 'Hello 4', text: 'This is my fourth post')
 
     expect(subject.posts_counter).to eq(4)
-    expect(User.most_recent_posts(subject.id).length).to eq(3)
-  end
-
-  it 'should have a private method that returns the user from an id' do
-    expect(User.send(:from_user, subject.id)).to eq(subject)
+    expect(subject.most_recent_posts.length).to eq(3)
   end
 
   it 'should validate a name that is not blank' do
