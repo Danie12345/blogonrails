@@ -1,3 +1,24 @@
+.full-post {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-data > span:nth-child(2) {
+  width: auto;
+}
+
+.post-text {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5%;
+}
+
 .comments-list {
   width: 100%;
   box-sizing: border-box;
