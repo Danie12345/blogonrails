@@ -1,13 +1,11 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.where(params[:id]).where(author_id: params[:user_id])
+    @user = User.find(params[:user_id])
   end
 
   def show
-    @post = if Post.all.empty?
-              'no posts found at all!'
-            else
-              Post.find(params[:id])
-            end
+    @posts = Post.where(params[:id]).where(author_id: params[:user_id])
+    @user = User.find(params[:user_id])
   end
 end
