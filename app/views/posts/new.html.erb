@@ -2,16 +2,16 @@
   <i class="fa-solid fa-arrow-left-long"></i>
 <% end %>
 <%= form_with model: post, url: user_posts_path, method: :post, local: true, scope: :post do |f| %>
-  <div>
-    <div>
-      <%= f.label "Title:" %>
+  <div class="post-new-form">
+    <div class="post-new-title">
+      <%= f.label "Title" %>
       <%= f.text_field :title %>
     </div>
-    <div>
-      <%= f.label "Content:" %>
+    <div class="post-new-text">
+      <%= f.label "Content" %>
       <%= f.text_area :text %>
     </div>
-    <div>
+    <div class="post-new-submit">
       <%= f.submit 'Post!' %>
     </div>
   </div>
