@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
   def create
-    @user = current_user
+    @client = current_user
     @post = Post.find(params[:post_id])
     allparams = params.require(:comment).permit(:text)
-    allparams["author_id"] = @user.id
+    allparams["author_id"] = @client.id
     allparams["post_id"] = @post.id
     puts allparams
     comment = Comment.new(allparams)
@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
       format.html do
         if comment.save
           flash[:success] = "Comment created successfully!"
-          redirect_to user_post_path(user_id: @user.id, id: @post.id)
+          redirect_to user_post_path(user_id: @client.id, id: @post.id)
         else
           flash.now[:error] = "Error: Comment could not be saved!"
           render :new, locals: { post: comment }
