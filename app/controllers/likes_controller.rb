@@ -7,11 +7,11 @@ class LikesController < ApplicationController
     respond_to do |format|
       format.html do
         if like.save
-          flash[:success] = "Comment created successfully!"
+          flash[:success] = 'Comment created successfully!'
           redirect_to user_posts_path(user_id: @user.id)
         else
-          flash.now[:error] = "Error: Comment could not be saved!"
-          render :new, locals: { like: like }
+          flash.now[:error] = 'Error: Comment could not be saved!'
+          render :new, locals: { like: }
         end
       end
     end
