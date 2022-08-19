@@ -1,6 +1,7 @@
 .posts-index {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
@@ -27,11 +28,25 @@
   border: 1px solid rgb(0, 0, 0, 0.4);
 }
 
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post > :nth-child(2) {
+  justify-content: flex-end;
+}
+
 .post-stats {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
   gap: 8px;
+}
+
+.post-likes-counter {
+  display: flex;
+  gap: 4px;
+  width: fit-content;
 }
 
 .post-item > * {
@@ -39,6 +54,7 @@
 }
 
 .post-item {
+  width: 90%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -49,4 +65,11 @@
 .post-comments {
   box-sizing: border-box;
   padding: 5%;
+}
+
+.pagination-btn {
+  width: max-content;
+  box-sizing: border-box;
+  padding: 1% 1%;
+  margin-bottom: 16px;
 }

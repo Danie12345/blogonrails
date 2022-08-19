@@ -2,7 +2,7 @@
   <ul class="comments-list">
     <% comments.each do |comment| %>
       <li class="comment-item">
-        <%= comment.author.name %>: <%= comment.text %>
+        <span class="commenter"><%= comment.author.name %></span>: <%= comment.text %>
       </li>
     <% end %>
   </ul>
