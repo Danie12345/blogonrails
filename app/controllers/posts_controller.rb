@@ -17,7 +17,6 @@ class PostsController < ApplicationController
     @client = current_user
     allparams = params.require(:post).permit(:title, :text)
     allparams["author"] = @client
-    puts allparams
     post = Post.new(allparams)
     respond_to do |format|
       format.html do

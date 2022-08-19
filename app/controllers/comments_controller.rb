@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
     allparams = params.require(:comment).permit(:text)
     allparams["author_id"] = @client.id
     allparams["post_id"] = @post.id
-    puts allparams
     comment = Comment.new(allparams)
     respond_to do |format|
       format.html do
