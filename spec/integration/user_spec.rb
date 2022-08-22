@@ -34,5 +34,13 @@ RSpec.describe 'Users', type: :system do
       image = page.all('img')
       expect(image.size).to eq(5)
     end
+
+    it 'sees Number of posts for each user' do
+      expect(page).to have_content('Number of Posts: 4')
+      expect(page).to have_content('Number of Posts: 3')
+      expect(page).to have_content('Number of Posts: 2')
+      expect(page).to have_content('Number of Posts: 1')
+      expect(page).to have_content('Number of Posts: 0')
+    end
   end
 end
