@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :system do
   let!(:author) { User.where(name: 'Tom').first }
   let!(:lilly) { User.where(name: 'Lilly').first }
-  subject!(:post) { Post.where(title: 'Hello 3').first }
+  subject!(:post) { Post.where(title: 'Third Post').first }
   let!(:comment) { Comment.where(text: 'Hi Tom 4!').first }
 
   before(:all) do
@@ -35,5 +35,13 @@ RSpec.describe 'Posts', type: :system do
     it 'shows number of posts by that user' do
       expect(page).to have_content('Number of Posts: 4')
     end
+
+    it 'shows title of post' do
+      expect(page).to have_content(post.title)
+    end
+
+    # it 'shows post\'s body' do
+    #   expect(page).to have_content(post.text[0..50])
+    # end
   end
 end
