@@ -31,12 +31,8 @@ RSpec.describe 'Users', type: :system do
       expect(page).to have_content(author.name)
     end
 
-    it 'sees Number of posts for each user' do
+    it 'sees Number of posts' do
       expect(page).to have_content('Number of Posts: 4')
-      expect(page).to have_content('Number of Posts: 3')
-      expect(page).to have_content('Number of Posts: 2')
-      expect(page).to have_content('Number of Posts: 1')
-      expect(page).to have_content('Number of Posts: 0')
     end
 
     it 'renders user\'s show page when clicked' do
