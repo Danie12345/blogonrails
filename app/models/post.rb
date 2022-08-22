@@ -10,9 +10,13 @@ class Post < ApplicationRecord
   validates :title, length: { maximum: 251 }, allow_blank: false
   validates :comments_counter, comparison: { greater_than_or_equal_to: 0 }
   validates :likes_counter, comparison: { greater_than_or_equal_to: 0 }
-
+  
+  def allcomments
+    comments.includes([:author]).order(created_at: :desc)
+  end
+  
   def most_recent_comments
-    comments.order(created_at: :desc).limit(5)
+    allcomments.limit(5)
   end
 
   private

@@ -12,7 +12,7 @@
         <% end %>
       </div>
       <div class="post-comments">
-        <%= render "shared/comments_preview", comments: [post.comments, post.most_recent_comments][type] %>
+        <%= render "shared/comments_preview", comments: [post.allcomments, post.most_recent_comments][type] %>
       </div>
     </li>
   <% end %>
