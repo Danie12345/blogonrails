@@ -27,5 +27,9 @@ RSpec.describe 'Posts', type: :system do
       image = page.all('img')
       expect(image.size).to eq(1)
     end
+
+    it 'shows user\'s username' do
+      expect(page).to have_content(author.name)
+    end
   end
 end
