@@ -27,9 +27,8 @@ RSpec.describe 'Users', type: :system do
       expect(image.size).to eq(1)
     end
 
-    it 'see profile picture for each user' do
-      image = page.all('img')
-      expect(image.size).to eq(5)
+    it 'see username ' do
+      expect(page).to have_content(author.name)
     end
 
     it 'sees Number of posts for each user' do
