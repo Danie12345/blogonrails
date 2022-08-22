@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :system do
   let!(:author) { User.where(name: 'Tom').first }
   let!(:lilly) { User.where(name: 'Lilly').first }
-  subject!(:post) { Post.where(title: 'Third Post').first }
-  let!(:comment) { Comment.where(text: 'Hi Tom 4!').first }
+  subject!(:post) { Post.where(title: 'Fifth Post').first }
+  let!(:comment) { post.comments[2] }
 
   before(:all) do
     Rails.application.load_seed
@@ -36,12 +36,20 @@ RSpec.describe 'Posts', type: :system do
       expect(page).to have_content('Number of Posts: 4')
     end
 
-    it 'shows title of post' do
-      expect(page).to have_content(post.title)
-    end
+    # it 'shows title of post' do
+    #   expect(page).to have_content(post.title)
+    # end
 
     # it 'shows post\'s body' do
     #   expect(page).to have_content(post.text[0..50])
     # end
+
+    # it 'shows the first comments on a post' do
+    #   expect(page).to have_content(comment.text)
+    # end
+
+    it 'shows number of comments the post has' do
+      expect(page).to have_content('Comments 0')
+    end
   end
 end
