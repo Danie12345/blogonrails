@@ -39,6 +39,11 @@ RSpec.describe 'Users', type: :system do
       expect(page).to have_content(author.bio)
     end
 
+    it 'user\'s first three posts are shown' do
+      posts = page.all('.post-item')
+      expect(posts.size).to eq(3)
+    end
+
     end
   end
 end
