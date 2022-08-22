@@ -50,6 +50,11 @@ RSpec.describe 'Users', type: :system do
       end
     end
 
+    it 'redirects to post\'s index page' do
+      first(:link, 'See more').click
+      expect(page).to have_current_path user_posts_path(author.id)
+    end
+
     end
   end
 end
