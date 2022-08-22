@@ -1,6 +1,6 @@
 <div class="post">
-  <span class="post-index">Post # <%= post.id %></span>
   <span class="post-title"><%= post.title %></span>
+  <span class="post-index"><%= post.text.truncate(150) %></span>
   <div class="post-stats">
     <span class="post-comments-counter">Comments <%= post.comments_counter %> </span>
     <span class="post-likes-counter">
