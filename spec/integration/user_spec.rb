@@ -44,6 +44,12 @@ RSpec.describe 'Users', type: :system do
       expect(posts.size).to eq(3)
     end
 
+    it 'shows a button with text See more' do
+      within('button.more-posts-button') do
+        expect(page).to have_content('See more')
+      end
+    end
+
     end
   end
 end
