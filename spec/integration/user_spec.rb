@@ -22,12 +22,9 @@ RSpec.describe 'Users', type: :system do
       visit user_path(author.id)
     end
 
-    it 'see username of all other users' do
-      expect(page).to have_content(author.name)
-      expect(page).to have_content(lilly.name)
-      expect(page).to have_content('John')
-      expect(page).to have_content('Jerry')
-      expect(page).to have_content('Jane')
+    it 'shows user\'s profile picture' do
+      image = page.all('img')
+      expect(image.size).to eq(1)
     end
 
     it 'see profile picture for each user' do
