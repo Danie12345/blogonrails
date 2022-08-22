@@ -29,5 +29,10 @@ RSpec.describe 'Users', type: :system do
       expect(page).to have_content('Jerry')
       expect(page).to have_content('Jane')
     end
+
+    it 'see profile picture for each user' do
+      image = page.all('img')
+      expect(image.size).to eq(5)
+    end
   end
 end
