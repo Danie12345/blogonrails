@@ -19,7 +19,7 @@ second_post = Post.create(author: first_user, title: 'Second Post',
                           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. In dictum non consectetur a erat nam. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Ut porttitor leo a diam sollicitudin. Nunc non blandit massa enim nec dui nunc mattis. At urna condimentum mattis pellentesque. Nibh venenatis cras sed felis eget velit. Cursus risus at ultrices mi tempus imperdiet. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Risus feugiat in ante metus dictum at tempor commodo. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Quis hendrerit dolor magna eget est lorem ipsum.')
 third_post = Post.create(author: first_user, title: 'Third Post',
                          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. In dictum non consectetur a erat nam. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Ut porttitor leo a diam sollicitudin. Nunc non blandit massa enim nec dui nunc mattis. At urna condimentum mattis pellentesque. Nibh venenatis cras sed felis eget velit. Cursus risus at ultrices mi tempus imperdiet. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Risus feugiat in ante metus dictum at tempor commodo. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Quis hendrerit dolor magna eget est lorem ipsum.')
-fourth_post = Post.create(author: first_user, title: 'Forth Post',
+fourth_post = Post.create(author: first_user, title: 'Fourth Post',
                           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. In dictum non consectetur a erat nam. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Ut porttitor leo a diam sollicitudin. Nunc non blandit massa enim nec dui nunc mattis. At urna condimentum mattis pellentesque. Nibh venenatis cras sed felis eget velit. Cursus risus at ultrices mi tempus imperdiet. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Risus feugiat in ante metus dictum at tempor commodo. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Quis hendrerit dolor magna eget est lorem ipsum.')
 
 first2_post = Post.create(author: second_user, title: 'Fifth Post',
@@ -38,24 +38,24 @@ fourth2_post = Post.create(author: third_user, title: 'Nineth Post',
 fifth2_post = Post.create(author: fourth_user, title: 'Tenth Post',
                           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. In dictum non consectetur a erat nam. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Ut porttitor leo a diam sollicitudin. Nunc non blandit massa enim nec dui nunc mattis. At urna condimentum mattis pellentesque. Nibh venenatis cras sed felis eget velit. Cursus risus at ultrices mi tempus imperdiet. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Risus feugiat in ante metus dictum at tempor commodo. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Quis hendrerit dolor magna eget est lorem ipsum.')
 
-Comment.create(post: fifth_post, author: third_user,
-               text: 'Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in.!')
-Comment.create(post: fifth_post, author: fourth_user,
-               text: 'Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales')
-Comment.create(post: fifth_post, author: third_user,
-               text: 'Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in.!')
-Comment.create(post: fifth_post, author: fifth_user, text: 'In dictum non consectetur a erat nam!')
+Comment.create(post: fourth_post, author: third_user,
+               text: '1 Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in.!')
+Comment.create(post: fourth_post, author: fourth_user,
+               text: '2 Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales')
+Comment.create(post: fourth_post, author: third_user,
+               text: '3 Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in.!')
+Comment.create(post: fourth_post, author: fifth_user, text: '4 In dictum non consectetur a erat nam!')
 
 Comment.create(post: first2_post, author: third_user,
-               text: 'Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales!')
+               text: '5 Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales!')
 Comment.create(post: first2_post, author: first_user,
-               text: 'Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in.!')
+               text: '6 Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in.!')
 Comment.create(post: first2_post, author: second_user,
-               text: 'Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in.!')
-Comment.create(post: first2_post, author: first_user, text: 'In dictum non consectetur a erat nam!')
+               text: '7 Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in.!')
+Comment.create(post: first2_post, author: first_user, text: '8 In dictum non consectetur a erat nam!')
 Comment.create(post: first2_post, author: second_user,
-               text: 'Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales!')
-Comment.create(post: first2_post, author: first_user, text: 'In dictum non consectetur a erat nam!')
+               text: '9 Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales!')
+Comment.create(post: first2_post, author: first_user, text: '10 In dictum non consectetur a erat nam!')
 
 Like.create(author: first_user, post: first_post)
 Like.create(author: third_user, post: fifth2_post)
