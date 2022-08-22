@@ -55,6 +55,9 @@ RSpec.describe 'Users', type: :system do
       expect(page).to have_current_path user_posts_path(author.id)
     end
 
+    it 'redirects to post\'s show page' do
+      click_on post.title
+      expect(page).to have_current_path user_post_path(author.id, post.id)
     end
   end
 end
