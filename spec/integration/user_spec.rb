@@ -42,5 +42,11 @@ RSpec.describe 'Users', type: :system do
       expect(page).to have_content('Number of Posts: 1')
       expect(page).to have_content('Number of Posts: 0')
     end
+
+    it 'renders user\'s show page when clicked' do
+      first(:link, lilly.name).click
+      expect(page).to have_current_path user_path(lilly.id)
+      expect(page).to have_content(lilly.bio)
+    end
   end
 end
