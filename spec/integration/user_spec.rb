@@ -17,9 +17,9 @@ RSpec.describe 'Users', type: :system do
     User.destroy_all
   end
 
-  describe 'index page' do
+  describe 'show page' do
     before(:example) do
-      visit root_path
+      visit user_path(author.id)
     end
 
     it 'see username of all other users' do
