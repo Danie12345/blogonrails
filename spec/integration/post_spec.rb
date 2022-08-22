@@ -51,5 +51,13 @@ RSpec.describe 'Posts', type: :system do
     it 'shows number of comments the post has' do
       expect(page).to have_content('Comments 0')
     end
+
+    # it 'shows how many likes the post has' do
+    #   expect(page).to have_content('Like\n1')
+    # end
+
+    it 'has pagination button' do
+      expect(page).to have_content('Pagination')
+    end
   end
 end
