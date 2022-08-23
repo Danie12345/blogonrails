@@ -10,7 +10,7 @@ RSpec.describe 'Posts', type: :feature do
     Capybara.configure do |config|
       config.run_server = false
     end
-    session = Capybara::Session.new(:selenium)
+    Capybara::Session.new(:selenium)
     Rails.application.load_seed
   end
 
@@ -81,7 +81,7 @@ RSpec.describe 'Posts', type: :feature do
     it 'shows who wrote the post' do
       expect(page).to have_content(author.name)
     end
-    
+
     it 'shows number of comments the post has' do
       expect(page).to have_content('Comments 4')
     end

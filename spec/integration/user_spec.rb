@@ -9,7 +9,7 @@ RSpec.describe 'Users', type: :feature do
     Capybara.configure do |config|
       config.run_server = false
     end
-    session = Capybara::Session.new(:selenium)
+    Capybara::Session.new(:selenium)
     Rails.application.load_seed
   end
 
@@ -19,7 +19,7 @@ RSpec.describe 'Users', type: :feature do
     Post.destroy_all
     User.destroy_all
   end
-  
+
   describe 'index page' do
     before(:example) do
       visit root_path
