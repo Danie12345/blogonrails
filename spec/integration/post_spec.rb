@@ -62,6 +62,15 @@ RSpec.describe 'Posts', type: :feature do
     it 'redirects to the post show page when clicking on the title' do
       click_on(post.title)
       expect(page).to have_current_path user_post_path(author.id, post.id)
+    end
+  end
+
+  describe 'index page' do
+    before(:example) do
+      visit user_post_path(author.id, post.id)
+    end
+
+    it 'shows post\'s title' do
       expect(page).to have_content(post.title)
     end
   end
