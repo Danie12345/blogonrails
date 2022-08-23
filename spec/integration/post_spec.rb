@@ -85,5 +85,9 @@ RSpec.describe 'Posts', type: :feature do
     it 'shows how many likes the post has' do
       expect(page).to have_content('Likes 3')
     end
+
+    it 'shows the body of the post' do
+      expect(page).to have_content(post.text)
+    end
   end
 end
