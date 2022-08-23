@@ -89,5 +89,11 @@ RSpec.describe 'Posts', type: :feature do
     it 'shows the body of the post' do
       expect(page).to have_content(post.text)
     end
+
+    it 'shows the name of the commentors' do
+      post.comments.each do |comment|
+        expect(page).to have_content(comment.author.name)
+      end
+    end
   end
 end
