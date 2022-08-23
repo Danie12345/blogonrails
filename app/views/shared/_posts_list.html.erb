@@ -2,17 +2,12 @@
   <% posts.each do |post| %>
     <li class="post-item">
       <div class="post-card">
-        <span class="post-index">Post # <%= post.id %></span>
-        <% if clickable %>
-          <%= link_to user_post_path(user_id: user.id, id: post.id), :action => 'go' do %>
-            <%= render "shared/post_preview", post: post %>
-          <% end %>
-        <% else %>
+        <%= link_to user_post_path(user_id: user.id, id: post.id), :action => 'go' do %>
           <%= render "shared/post_preview", post: post %>
         <% end %>
       </div>
       <div class="post-comments">
-        <%= render "shared/comments_preview", comments: [post.comments, post.most_recent_comments][type] %>
+        <%= render "shared/comments_preview", comments: [post.allcomments, post.most_recent_comments][type] %>
       </div>
     </li>
   <% end %>
