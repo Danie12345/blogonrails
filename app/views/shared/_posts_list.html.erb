@@ -2,11 +2,7 @@
   <% posts.each do |post| %>
     <li class="post-item">
       <div class="post-card">
-        <% if clickable %>
-          <%= link_to user_post_path(user_id: user.id, id: post.id), :action => 'go' do %>
-            <%= render "shared/post_preview", post: post %>
-          <% end %>
-        <% else %>
+        <%= link_to user_post_path(user_id: user.id, id: post.id), :action => 'go' do %>
           <%= render "shared/post_preview", post: post %>
         <% end %>
       </div>

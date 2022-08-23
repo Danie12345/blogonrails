@@ -7,6 +7,10 @@ RSpec.describe 'Posts', type: :feature do
   let!(:comment) { post.comments[2] }
 
   before(:all) do
+    Capybara.configure do |config|
+      config.run_server = false
+    end
+    session = Capybara::Session.new(:selenium)
     Rails.application.load_seed
   end
 
@@ -65,7 +69,7 @@ RSpec.describe 'Posts', type: :feature do
     end
   end
 
-  describe 'index page' do
+  describe 'show page' do
     before(:example) do
       visit user_post_path(author.id, post.id)
     end
