@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :system do
+RSpec.describe 'Posts', type: :feature do
   let!(:author) { User.where(name: 'Tom').first }
   let!(:lilly) { User.where(name: 'Lilly').first }
   subject!(:post) { Post.where(title: 'Fourth Post').first }
@@ -8,7 +8,6 @@ RSpec.describe 'Posts', type: :system do
 
   before(:all) do
     Rails.application.load_seed
-    driven_by(:selenium_chrome_headless)
   end
 
   after(:all) do
@@ -36,32 +35,32 @@ RSpec.describe 'Posts', type: :system do
       expect(page).to have_content('Number of Posts: 4')
     end
 
-    # it 'shows title of post' do
-    #   expect(page).to have_content(post.title)
-    # end
+    it 'shows title of post' do
+      expect(page).to have_content(post.title)
+    end
 
-    # it 'shows post\'s body' do
-    #   expect(page).to have_content(post.text[0..50])
-    # end
+    it 'shows post\'s body' do
+      expect(page).to have_content(post.text[0..50])
+    end
 
-    # it 'shows the first comments on a post' do
-    #   expect(page).to have_content(comment.text)
-    # end
+    it 'shows the first comments on a post' do
+      expect(page).to have_content(comment.text)
+    end
 
     it 'shows number of comments the post has' do
       expect(page).to have_content('Comments 0')
     end
 
-    # it 'shows how many likes the post has' do
-    #   expect(page).to have_content('Like\n1')
-    # end
+    it 'shows how many likes the post has' do
+      expect(page).to have_content('Likes 1')
+    end
 
     it 'has pagination button' do
       expect(page).to have_content('Pagination')
     end
 
     it 'redirects to the post show page when clicking on the title' do
-      click_link(post.title)
+      click_on(post.title)
       expect(page).to have_current_path user_post_path(author.id, post.id)
       expect(page).to have_content(post.title)
     end

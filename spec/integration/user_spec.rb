@@ -1,13 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :system do
+RSpec.describe 'Users', type: :feature do
   subject!(:author) { User.where(name: 'Tom').first }
   subject!(:lilly) { User.where(name: 'Lilly').first }
-  let!(:post) { Post.where(title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit').first }
+  let!(:post) { author.posts.first }
 
   before(:all) do
     Rails.application.load_seed
-    driven_by(:selenium_chrome_headless)
   end
 
   after(:all) do
@@ -54,9 +53,14 @@ RSpec.describe 'Users', type: :system do
       first(:link, 'See more').click
       expect(page).to have_current_path user_posts_path(author.id)
     end
+  end
 
+  describe 'show page' do
+    before(:example) do
+      visit user_posts_path(author.id)
+    end
     it 'redirects to post\'s show page' do
-      first(:link, 'Post # 1').click
+      click_on(post.title)
       expect(page).to have_current_path user_post_path(author.id, post.id)
     end
   end
