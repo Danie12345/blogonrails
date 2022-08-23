@@ -77,5 +77,9 @@ RSpec.describe 'Posts', type: :feature do
     it 'shows who wrote the post' do
       expect(page).to have_content(author.name)
     end
+    
+    it 'shows number of comments the post has' do
+      expect(page).to have_content('Comments 4')
+    end
   end
 end
