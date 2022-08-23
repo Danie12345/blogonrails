@@ -73,5 +73,9 @@ RSpec.describe 'Posts', type: :feature do
     it 'shows post\'s title' do
       expect(page).to have_content(post.title)
     end
+
+    it 'shows who wrote the post' do
+      expect(page).to have_content(author.name)
+    end
   end
 end
