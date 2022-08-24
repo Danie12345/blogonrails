@@ -18,6 +18,10 @@ class User < ApplicationRecord
   end
 
   def client_photo
-    photo.blank? ? 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' : photo
+    if photo.blank?
+      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    else
+      photo
+    end
   end
 end
