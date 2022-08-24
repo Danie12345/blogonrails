@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @client = current_user
     @posts = Post.where(params[:id]).where(author_id: params[:user_id])
