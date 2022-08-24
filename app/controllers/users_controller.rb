@@ -10,5 +10,4 @@ class UsersController < ApplicationController
     @client = current_user
     @user = User.find(params[:id])
   end
-
 end
