@@ -15,4 +15,8 @@ class User < ApplicationRecord
   def most_recent_posts
     posts.order(created_at: :desc).limit(3)
   end
+
+  def client_photo
+    photo.blank? ? 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' : photo  
+  end
 end
