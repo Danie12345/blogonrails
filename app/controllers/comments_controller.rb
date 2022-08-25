@@ -25,6 +25,7 @@ class CommentsController < ApplicationController
   def destroy
     @client = current_user
     @comment = Comment.find(params[:id])
+    authorize! :destroy, @comment
     @comment.destroy
     redirect_to request.referer
   end
