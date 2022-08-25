@@ -1,0 +1,39 @@
+br {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.field {
+  margin: 12px 0;
+}
+
+.field > label {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin: 0%;
+}
+
+.field > *:not(input#user_remember_me, label) {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#remember-me {
+  display: flex;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 12px;
+}
