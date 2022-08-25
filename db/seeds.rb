@@ -12,23 +12,35 @@ fourth_user = User.new(name: 'John', email: 'john@example.com',
                           photo: 'https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..')
 fifth_user = User.new(name: 'Jane', email: 'jane@example.com',
                          photo: 'https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..')
+admin = User.new(name: 'Admin', email: 'admin@example.com',
+                        photo: 'https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..')
 
 first_user.password = 'daniel'
 first_user.password_confirmation = 'daniel'
+first_user.confirm
 first_user.save!
 second_user.password = 'daniel'
 second_user.password_confirmation = 'daniel'
+second_user.confirm
 second_user.save!
 third_user.password = 'daniel'
 third_user.password_confirmation = 'daniel'
+third_user.confirm
 third_user.save!
 fourth_user.password = 'daniel'
 fourth_user.password_confirmation = 'daniel'
+fourth_user.confirm
 fourth_user.save!
 fifth_user.password = 'daniel'
 fifth_user.password_confirmation = 'daniel'
+fifth_user.confirm
 fifth_user.save!
- 
+admin.password = 'adminz'
+admin.password_confirmation = 'adminz'
+admin.confirm
+admin.role = 'admin'
+admin.save!
+
 first_post = Post.create(author: first_user, title: 'First Post',
                          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. In dictum non consectetur a erat nam. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Ut porttitor leo a diam sollicitudin. Nunc non blandit massa enim nec dui nunc mattis. At urna condimentum mattis pellentesque. Nibh venenatis cras sed felis eget velit. Cursus risus at ultrices mi tempus imperdiet. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Risus feugiat in ante metus dictum at tempor commodo. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Quis hendrerit dolor magna eget est lorem ipsum.')
 second_post = Post.create(author: first_user, title: 'Second Post',
