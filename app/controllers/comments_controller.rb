@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+  authorize_resource
+
   def create
     @client = current_user
     @post = Post.find(params[:post_id])
@@ -17,5 +20,12 @@ class CommentsController < ApplicationController
         end
       end
     end
+  end
+
+  def destroy
+    @client = current_user
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to request.referer
   end
 end
