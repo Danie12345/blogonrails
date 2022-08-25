@@ -1,4 +1,4 @@
-<% if @client.admin? || @client.id == comment.author_id %>
+<% if can? :destroy, comment %>
   <%= button_to "X" , user_post_comment_path(comment.author_id, comment.post_id, comment.id), method: :delete %>
 <% end %>
 
