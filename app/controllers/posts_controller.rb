@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
+  authorize_resource
 
   def index
     @client = current_user
@@ -37,5 +38,13 @@ class PostsController < ApplicationController
     @client = current_user
     @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
+  end
+
+  def destroy
+    @client = current_user
+    @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
+    @post.destroy if @client.admin? || @client.id == @post.author_id
+    redirect_to request.referrer
   end
 end
