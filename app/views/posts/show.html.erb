@@ -4,6 +4,7 @@
 <div class="full-post">
   <div class="post-top">
     <div class="post-data">
+      <%= render "shared/post_delete", post: @post %>
       <span class="post-title"><%= @post.title %> by <%= @user.name %> </span>
       <span class="post-stats">
         <span class="post-comments-counter">Comments <%= @post.comments_counter %> </span>

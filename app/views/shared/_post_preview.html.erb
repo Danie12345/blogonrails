@@ -1,4 +1,5 @@
 <div class="post">
+  <%= render "shared/post_delete", post: post %>
   <span class="post-title"><%= post.title %></span>
   <span class="post-index"><%= post.text.truncate(150) %></span>
   <div class="post-stats">
