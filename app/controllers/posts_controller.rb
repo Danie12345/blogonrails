@@ -43,8 +43,12 @@ class PostsController < ApplicationController
   def destroy
     @client = current_user
     @post = Post.find(params[:id])
-    @user = User.find(params[:user_id])
-    @post.destroy if @client.admin? || @client.id == @post.author_id
-    redirect_to request.referrer
+    if current_page?(user_post_path(@post.author_id, @post.id))
+      @post.destroy
+      redirect_to user_posts_path(@post.author_id)
+    else
+      @post.destroy
+      redirect_to request.referer
+    end
   end
 end
