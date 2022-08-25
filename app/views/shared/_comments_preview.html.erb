@@ -2,6 +2,7 @@
   <ul class="comments-list">
     <% comments.each do |comment| %>
       <li class="comment-item">
+        <%= render "shared/comment_delete", comment: comment %>
         <span class="commenter"><%= comment.author.name %></span>: <%= comment.text %>
       </li>
     <% end %>
