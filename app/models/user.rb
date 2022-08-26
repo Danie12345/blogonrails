@@ -3,9 +3,10 @@ require_relative 'application_record'
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,
-         :confirmable
+  devise :database_authenticatable, :jwt_authenticatable,
+         :registerable, :recoverable, 
+         :rememberable, :validatable,
+         :confirmable, jwt_revocation_strategy: JwtDenylist
   has_many :posts, class_name: 'Post', foreign_key: 'author_id'
   has_many :likes, class_name: 'Like', foreign_key: 'author_id'
   has_many :comments, class_name: 'Comment', foreign_key: 'author_id'
