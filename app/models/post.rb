@@ -2,10 +2,11 @@ require_relative 'application_record'
 
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
-  has_many :likes
-  has_many :comments
+  has_many :likes, foreign_key: 'post_id', dependent: :delete_all
+  has_many :comments, foreign_key: 'post_id', dependent: :delete_all
 
   after_save :increment_user_post_count
+  after_destroy :decrement_user_post_count
 
   validates :title, length: { maximum: 251 }, allow_blank: false
   validates :comments_counter, comparison: { greater_than_or_equal_to: 0 }
@@ -23,5 +24,9 @@ class Post < ApplicationRecord
 
   def increment_user_post_count
     author.increment!(:posts_counter)
+  end
+
+  def decrement_user_post_count
+    author.decrement!(:posts_counter)
   end
 end

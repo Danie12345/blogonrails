@@ -24,4 +24,8 @@ class User < ApplicationRecord
       photo
     end
   end
+
+  def admin?
+    role == 'admin'
+  end
 end

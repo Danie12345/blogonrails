@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+  authorize_resource
+
   def create
     @client = current_user
     @post = Post.find(params[:post_id])
@@ -10,12 +13,20 @@ class CommentsController < ApplicationController
       format.html do
         if comment.save
           flash[:success] = 'Comment created successfully!'
-          redirect_to user_post_path(user_id: @client.id, id: @post.id)
+          redirect_to request.referrer
         else
           flash.now[:error] = 'Error: Comment could not be saved!'
           render :new, locals: { comment: }
         end
       end
     end
+  end
+
+  def destroy
+    @client = current_user
+    @comment = Comment.find(params[:id])
+    authorize! :destroy, @comment
+    @comment.destroy
+    redirect_to request.referer
   end
 end
