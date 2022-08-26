@@ -1,4 +1,5 @@
 class Api::V1::CommentsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
   authorize_resource
 
@@ -15,8 +16,6 @@ class Api::V1::CommentsController < ApplicationController
     comment = Comment.new(allparams)
     if comment.save
       redirect_to request.referrer
-    else
-      render :index
     end
   end
 end
