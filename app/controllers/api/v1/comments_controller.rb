@@ -4,7 +4,7 @@ class Api::V1::CommentsController < ApplicationController
   authorize_resource
 
   def index
-    render json: Comment.where(author_id: params[:user_id], post_id: params[:post_id]).all
+    render json: Comment.where(post_id: params[:post_id])
   end
 
   def create
@@ -14,6 +14,10 @@ class Api::V1::CommentsController < ApplicationController
     allparams['author_id'] = @client.id
     allparams['post_id'] = @post.id
     comment = Comment.new(allparams)
-    redirect_to request.referrer if comment.save
+    if comment.save
+      render json: { message: 'Created comment :D' }, status: :created
+    else
+      render json: { message: 'Couldn\'t create comment :(' }, status: 400
+    end
   end
 end
