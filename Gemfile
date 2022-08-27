@@ -65,8 +65,8 @@ group :development, :test do
   gem 'bullet'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails', '~> 4.0.0.beta2'
   gem 'dotenv-rails'
+  gem 'rspec-rails', '~> 4.0.0.beta2'
 end
 
 group :development do
