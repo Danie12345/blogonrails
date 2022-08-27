@@ -14,8 +14,6 @@ class Api::V1::CommentsController < ApplicationController
     allparams['author_id'] = @client.id
     allparams['post_id'] = @post.id
     comment = Comment.new(allparams)
-    if comment.save
-      redirect_to request.referrer
-    end
+    redirect_to request.referrer if comment.save
   end
 end
