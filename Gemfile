@@ -48,8 +48,11 @@ gem 'bootsnap', '>= 1.1.0', '< 1.4.2', require: false
 gem 'ffi'
 
 gem 'devise'
+gem 'devise-jwt'
 
 gem 'cancancan'
+
+gem 'rack-cors'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -62,6 +65,7 @@ group :development, :test do
   gem 'bullet'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'dotenv-rails'
   gem 'rspec-rails', '~> 4.0.0.beta2'
 end
 
