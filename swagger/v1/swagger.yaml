@@ -1,0 +1,104 @@
+---
+swagger: '2.0'
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/users/{user_id}/posts/{post_id}/comments":
+    parameters:
+    - name: user_id
+      in: path
+      type: string
+      description: user_id
+      required: true
+    - name: post_id
+      in: path
+      type: string
+      description: post_id
+      required: true
+    get:
+      summary: list comments
+      tags:
+      - Comments
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create comment
+      tags:
+      - Comments
+      consumes:
+      - application/json
+      - application/xml
+      parameters:
+      - name: comment
+        in: body
+        schema:
+          type: object
+          properties:
+            text:
+              type: string
+          required:
+          - text
+      responses:
+        '200':
+          description: successful
+  "/api/v1/users/{user_id}/posts":
+    parameters:
+    - name: user_id
+      in: path
+      type: string
+      description: user_id
+      required: true
+    get:
+      summary: list posts
+      tags:
+      - Posts
+      responses:
+        '200':
+          description: successful
+  "/users/sign_in":
+    post:
+      summary: create session
+      tags:
+      - Session
+      consumes:
+      - application/json
+      - application/xml
+      parameters:
+      - name: user
+        in: body
+        schema:
+          type: object
+          properties:
+            user:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+          required:
+          - user
+      responses:
+        '200':
+          description: successful
+  "/users/sign_out":
+    delete:
+      summary: delete session
+      tags:
+      - Session
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaulthost}
+  variables:
+    defaultHost:
+      default: localhost:3000
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
